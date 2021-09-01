@@ -1,0 +1,55 @@
+          
+
+            
+            //up arrow down arrow hit enter to select
+            if((e.which==40) & (flag==0)){
+                console.log("40") //40 down arrow
+                if(pointer<upperbound){
+                    pointer+=1;
+                    flag=1;
+                  
+                }
+           
+            
+
+                console.log(pointer);
+                //allList[pointer]                           //
+            }
+            if((e.which==38) & (flag==0)){//
+                console.log("38") //38 up arrow
+                if(pointer>0){
+                    pointer-=1;
+                    flag=1;
+                   
+                }
+
+                
+                console.log(pointer);
+                                                   //
+            }
+
+            if((e.which==13) & (flag2==0)) {//和上面一样的如果不加flag只按一次enter就会不断的点enter的效果。。
+                console.log("13") ;//13 enter
+                console.log(pointer) ;
+
+                console.log(allList[pointer]);
+                select(allList[pointer]);
+                pointer=0;
+                flag2=1;
+               
+
+               
+                console.log("selct via key enter");
+            }
+
+            if((flag==0)&(pointer!=upperbound)){
+                
+                pointer=0;//如果直接在这写pointer=0就不行，就会把pointe卡死在0
+            }
+
+
+
+
+
+
+//

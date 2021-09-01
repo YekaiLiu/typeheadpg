@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>typehead suggestion/highlight selected states </title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app_basic" v-bind:title="timestamp" style="color:white;font-size:25px" class="experiment-block">
+    {{ message }}</div>
+    <script>
+      new Vue({
+          el: "#app_basic",
+          data: {
+            message: " 🌎 a small web project 🗺️",
+            timestamp: `Timestamp ${new Date().toLocaleString()}`,
+          },
+      })
+    </script>
+
+    <div class="wrapper">
+      <div class="search-input">
+        <a href="" target="_blank" hidden></a>
+        <input type="text" placeholder="Type to search all states and territories...">
+        <div class="autocom-box">
+     
+        </div>
+        <div class="icon"><i class="fas fa-search"></i></div>
+      </div>
+    </div>
+
+    <div id="googleMap" style="width:100%;height:800px;"></div>
+
+     <script src="js/suggestions.js"></script> 
+     <script src="js/script.js"></script> 
+     <!--
+     <script type="text/javascript" src="js/us_states_polygon.js"> </script>
+     -->
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxUAXkoiSYXvpH0X1SdsSRDegpDWnEvCI&callback=myMap"> </script> 
+     <a style="font-size: 15px; display:inline-block; color: white"  
+     href="https://github.com/YekaiLiu/typehead_suggestion_highlight_google_map_usa_states//">
+     📁 You may want to find the project source code here...</a>
+      
+    
+
+  </body>
+</html>
