@@ -89,6 +89,14 @@ body{
   pointer-events: auto;
 }
 
+.search-input.selected .autocom-box{
+  padding: 10px 8px;
+  opacity: 0.2;
+  pointer-events: auto;
+}
+
+
+
 .autocom-box li{
   list-style: none;
   padding: 8px 12px;
@@ -98,9 +106,47 @@ body{
   border-radius: 3px;
 }
 
+
+.autocom-box a{
+  list-style: none;
+  padding: 8px 12px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+
+
+
 .search-input.active .autocom-box li{
   display: block;
 }
+
+
+
+.search-input.active .autocom-box a{
+  display: block;
+}
+
+
+.search-input.selected .autocom-box li{
+  display: block;
+}
+
+.autocom-box.selected li
+{
+  list-style: none;
+  padding: 8px 12px;
+  display: block;
+  font-family: "Lucida Console", "Courier New", monospace;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+
+
+
 .autocom-box li:hover{
   background: #efefef;
 }
